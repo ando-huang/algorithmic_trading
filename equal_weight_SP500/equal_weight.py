@@ -6,7 +6,7 @@ import math
 
 #import index data from api
 
-stocks = pd.read_csv('sp_500_stocks.csv')
+stocks = pd.read_csv('../sp_500_stocks.csv')
 
 #acquire api token
 
@@ -62,7 +62,7 @@ symbol_groups = list(chunks(stocks['Ticker'], 100))
 symbol_strings = []
 
 for i in range(len(symbol_groups)):
-    symbol_strings.append(', '.join(symbol_groups[i]))
+    symbol_strings.append(','.join(symbol_groups[i]))
 
 final_dataframe = pd.DataFrame(columns = cols)
 
